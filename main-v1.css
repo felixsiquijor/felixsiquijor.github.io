@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+:root {
+  --primaryColor: #d5f4e6;
+  --dark: rgb(211, 110, 43);
+  --light: #fff;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: "Lato", sans-serif;
+}
+.dark-mode {
+    color: var(--mainWhite);
+    background: var(--mainBlack);
+  }
+  #faClickable {
+    cursor: pointer;
+  }
+  a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: brown;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: blue;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+/* --------------- Navbar ---------------- */
+.navbar {
+  background: var(--mainWhite);
+  position: sticky;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #32a3aa;
+  z-index: 1;
+}
+.navbar-center {
+  width: 100%;
+  max-width: 1170px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+.nav-links a {
+  text-decoration: none;
+  padding: 0.5rem;
+  color: var(--mainWhite);
+}
+.nav-links a:hover {
+  border-radius: 5px;
+  background: var(--primaryColor);
+  color: var(--mainBlack);
+}
+.nav-icon a {
+  text-decoration: none;
+  padding: 1rem;
+  color: var(--mainWhite);
+}
+.nav-icon a:hover {
+  border-radius: 5px;
+  background: var(--primaryColor);
+  color: var(--mainBlack);
+}
+li{
+  list-style: none;
+  display: inline;
+  padding: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+li:hover{
+  font-weight: 900;
+}
+
+/*--- Dropdown Menu ---*/
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  width: 300px;
+  background: var(--mainGrey);
+/*--  background: rgba(255,255,255, 0.1); --*/
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toggle_btn {
+  display: none;
+}	
+
+.dropdown_menu.open {
+  display: none;
+  height: 240px;
+
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu a {
+  text-decoration: none;
+  padding: 0.5rem;
+  color: green;
+}
+.dropdown_menu a:hover {
+  background: #32a3aa;
+  color: var(--light);
+}
+
+/* --------------- Hero ---------------- */
+.hero {
+  min-height: calc(100vh - 60px);
+  background: url("https://unsplash.it/1000/1000") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner {
+  border-radius: 10px;
+  text-align: center;
+  background: var(--primaryColor);
+  display: inline-block;
+  padding: 2rem;
+}
+.banner-title {
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 3rem;
+}
+.banner-btn {
+  border-radius: 50%;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  background: var(--primaryColor);
+  color: var(--mainBlack);
+  border: 1px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  cursor: pointer;
+}
+.banner-btn:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+/* --------------- End of Hero ---------------- */
+
+.transparentBcg {
+  visibility: visible;
+}
+
+ /* Footer */
+ footer {
+  margin-top: 2rem;
+  background: var(--mainWhite);
+  color: var(--mainBlack);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* --------------- Products ---------------- */
+
+.products {
+  padding: 4rem 0;
+}
+.section-title h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.products-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+}
+.contactForm {
+  max-width: 45em;
+}
+.img-container {
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.txt-container {
+    background: var(--primaryColor);
+    margin: 10px;
+    padding: 20px;  
+    border: 2px;  
+    border-radius: 15px;
+    position: relative;
+}
+
+.bag-btn {
+  border-radius: 10px;
+  position: absolute;
+  top: 70%;
+  right: 0;
+  background: var(--primaryColor);
+  border: none;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  letter-spacing: var(--mainSpacing);
+  font-weight: bold;
+  transition: var(--mainTransition);
+  transform: translateX(101%);
+  cursor: pointer;
+}
+.bag-btn:hover {
+  color: var(--mainWhite);
+}
+.mail-btn {
+  border-radius: 10px;
+  background: var(--primaryColor);
+  border: none;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  letter-spacing: var(--mainSpacing);
+  font-weight: bold;
+}
+.fa-shopping-cart {
+  margin-right: 0.5rem;
+}
+.fa-address-book {
+  margin-right: 0.5rem;
+}
+.img-container:hover .bag-btn {
+  transform: translateX(0);
+}
+.product-img {
+  display: block;
+  width: 100%;
+  min-height: 12rem;
+  transition: var(--mainTransition);
+}
+.img-container:hover .product-img {
+  opacity: 0.5;
+}
+
+.product h3 {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+
+.product h4 {
+  margin-top: 0.7rem;
+  letter-spacing: var(--mainSpacing);
+  color: var(--primaryColor);
+  text-align: center;
+}
+
+/* --------------- Video ---------------- */
+.vidsize {
+  border-radius: 15px;
+  border: none;
+  width: 854px;
+  height: 480px;
+}
+
+
+/* Media Queries */
+@media (max-width: 700px) {
+  
+
+}
+
+@media (max-width: 500px) {
+
+.nav-links {
+  font-size: small;
+  display: none;
+}
+
+.dropdown_menu {
+  display: block;
+  font-size: 2rem;
+}
+
+.toggle_btn {
+  display: block;
+}	
+
+.vidsize {
+  width: 320px;
+  height: 240px;
+}
+
+
+.products {
+    padding: 1rem 0;
+    }
+    .section-title h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    }
+    .txt-container {
+    margin: 5px;
+    padding: 15px;  
+    line-height: 2rem;
+  }
+}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Calculators">
+    <meta name="author" content="Felix Siquijor">
+    <link rel="icon" type="image/x-icon" href="https://lexelmedia.gitlab.io/stocks/favicon.ico">
+    <title>Calculators</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .calculator {
+            background-color: white; /* Dark background */
+            border-radius: 8px;
+            overflow: hidden; /* Prevents content from overflowing rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+
+        #display {
+            width: 100%;
+            padding: 20px;
+            font-size: 24px;
+            text-align: right;
+            border: none;
+            background-color: #488; /* Darker display background */
+            color: white;
+            box-sizing: border-box;
+            outline: none; /* Remove default outline on focus */
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+        }
+
+        button {
+            margin: 5px;
+            padding: 20px;
+            font-size: 18px;
+            border: 1px;
+            border-radius: 15px;
+            background-color: #688; /* Button background */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth hover transition */
+        }
+
+        button:hover {
+            background-color: #555; /* Darker hover background */
+        }
+
+        .operator {
+            background-color: #408de6; /* Orange for operators */
+        }
+
+        .operator:hover {
+            background-color: #2014c7;
+        }
+
+        .equal {
+            grid-column: span 2; /* Takes up two columns */
+            background-color: #4CAF50; /* Green for equals */
+        }
+
+        .equal:hover {
+            background-color: #45a049;
+        }
+
+        .enterb {
+            background-color: #4CAF50; /* Green for enter button */
+        }
+
+        .enterb:hover {
+            background-color: #45a049;
+        }
+
+        /* Temperature */
+
+        .container {
+            margin-left: 50px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center text within the container */
+        }
+        .cborder{
+            padding: 15px 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        label {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        input[type="number"] {
+            width: 150px;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #resultT {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* Media Response */
+
+        @media (max-width: 500px) {
+        
+        body {
+            display: block;
+            margin: 20px;
+        }
+        
+        .container {
+            margin-left: 0px;
+            margin-top: 20px;
+        }
+        
+        }
+
+    </style>
+
+
+
+<!-- Temperature -->
+<script>
+    function convertCTemperature() {
+        const celsius = parseFloat(document.getElementById("celsius").value);
+
+        if (isNaN(celsius)) {
+            document.getElementById("resultT").textContent = "Please enter a valid number for Celsius.";
+            return;
+        }
+
+        const fahrenheit = (celsius * 9/5) + 32;
+        document.getElementById("resultT").textContent = `${celsius} °C is equal to ${fahrenheit.toFixed(2)} °F`;
+    }
+
+    function convertFTemperature() {
+        const fahrenheit = parseFloat(document.getElementById("fahrenheit").value);
+
+        if (isNaN(fahrenheit)) {
+            document.getElementById("resultT").textContent = "Please enter a valid number for Fahrenheit.";
+            return;
+        }
+
+        const celsius = (fahrenheit - 32) * 5 / 9;
+        document.getElementById("resultT").textContent = `${fahrenheit} °F is equal to ${celsius.toFixed(2)} °C`;
+    }
+
+</script>
+
+<!-- Mortgage Calculator -->
+<script>
+    function calculateMortgage() {
+      const principal = parseFloat(document.getElementById("principal").value);
+      const interestRate = parseFloat(document.getElementById("interest").value) / 100 / 12; // Monthly interest rate
+      const term = parseFloat(document.getElementById("term").value) * 12; // Total number of payments
+    
+      if (isNaN(principal) || isNaN(interestRate) || isNaN(term) || principal <= 0 || interestRate < 0 || term <= 0) {
+          alert("Please enter valid positive numbers.");
+          return;
+      }
+    
+      const monthlyPayment = (principal * interestRate * Math.pow(1 + interestRate, term)) / (Math.pow(1 + interestRate, term) - 1);
+      const totalInterest = (monthlyPayment * term) - principal;
+    
+      document.getElementById("resultm").innerHTML = `
+        <p><strong>Monthly Payment:</strong> PHP${monthlyPayment.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+        <p><strong>Total Interest:</strong> PHP${totalInterest.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+        <button class="enterb" onclick="openAmortizationSchedule(${principal}, ${interestRate}, ${term}, ${monthlyPayment})">View Amortization Schedule</button>
+      `;
+    }
+    
+    function openAmortizationSchedule(principal, interestRate, term, monthlyPayment) {
+        const amortizationSchedule = generateAmortizationSchedule(principal, interestRate, term, monthlyPayment);
+        const scheduleWindow = window.open('', '_blank');
+        if (scheduleWindow) { // Check if the popup was not blocked
+            scheduleWindow.document.write(`
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta name="description" content="Amortization Schedule">
+                <meta name="author" content="Felix Siquijor">                    
+                <title>Amortization Schedule</title>
+                  <style>
+                    table, th, td {border: 1px solid black; border-collapse: collapse; padding: 5px;}
+                    .content {font-family: Arial, Helvetica, sans-serif; margin: auto; width: 500px; padding: 20px; text-align: center;} 
+                  </style></head>
+                <body><div class="content">
+                
+                <table>
+                    <tr><th colspan="5"><h1>Amortization Schedule</h1></th></tr>
+                    <tr><th>Payment #</th><th>Payment</th><th>Interest</th><th>Principal</th><th>Balance</th></tr>
+                    ${amortizationSchedule}
+                </table></div>
+                </body>
+                </html>
+            `);
+            scheduleWindow.document.close();
+        } else {
+            alert("Please allow popups to view the amortization schedule.");
+        }
+    
+    }
+    
+    function generateAmortizationSchedule(principal, interestRate, term, monthlyPayment) {
+        let balance = principal;
+        let scheduleHTML = '';
+        for (let i = 1; i <= term; i++) {
+            const interestPaid = balance * interestRate;
+            const principalPaid = monthlyPayment - interestPaid;
+            balance -= principalPaid;
+            scheduleHTML += `<tr><td>${i}</td><td>P${monthlyPayment.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+              <td>P${interestPaid.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+              <td>P${principalPaid.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
+              <td>P${balance.toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td></tr>`;
+        }
+        return scheduleHTML;
+    }
+    
+    </script>
+
+</head>
+<body>
+<!-- Calculator -->
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button class="operator" onclick="setOperator('/')">/</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button class="operator" onclick="setOperator('*')">*</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="operator" onclick="setOperator('-')">-</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button> </button>
+            <button class="operator" onclick="setOperator('+')">+</button>
+            <button onclick="clearDisplay()">C</button>
+            <button class="equal" onclick="calculate()">=</button>
+            <button onclick="clearDisplay()">C</button>
+        </div>
+    </div>
+
+<!-- Calculator -->
+<script>
+    let display = document.getElementById('display');
+    let currentInput = '';
+    let operator = '';
+    let previousInput = '';
+
+    function appendToDisplay(value) {
+        currentInput += value;
+        display.value = currentInput;
+    }
+
+    function setOperator(op) {
+        if (currentInput === '') return; // Prevent setting operator if no input
+
+        if (previousInput !== '') {
+            calculate(); // Perform pending calculation
+        }
+
+        operator = op;
+        previousInput = currentInput;
+        currentInput = '';
+    }
+
+    function calculate() {
+        if (currentInput === '' || previousInput === '' || operator === '') return;
+
+        let result;
+        const num1 = parseFloat(previousInput);
+        const num2 = parseFloat(currentInput);
+
+        switch (operator) {
+            case '+': result = num1 + num2; break;
+            case '-': result = num1 - num2; break;
+            case '*': result = num1 * num2; break;
+            case '/':
+                if (num2 === 0) {
+                    result = "Error"; // Handle division by zero
+                    break;
+                }
+                result = num1 / num2;
+                break;
+            default: return;
+        }
+
+        display.value = result;
+        currentInput = result.toString();
+        previousInput = '';
+        operator = '';
+    }
+    function clearDisplay(){
+        display.value = '';
+        currentInput = '';
+        previousInput = '';
+        operator = '';
+    }
+</script>
+
+<!-- Temperature-->
+<div class="container">
+    <h1>Temperature Converter</h1>
+    <div class="cborder">
+    <label for="celsius">°C:</label>
+    <input type="number" id="celsius" placeholder="Enter Celsius">
+    <button class="enterb" onclick="convertCTemperature()">Convert to Fahrenheit</button>
+    </div>
+    <div class="cborder">
+    <label for="fahrenheit">°F:</label>
+    <input type="number" id="fahrenheit" placeholder="Enter Fahrenheit">
+    <button class="enterb" onclick="convertFTemperature()">Convert to Centigrade</button>
+    </div>
+
+    <div id="resultT"></div>
+</div>
+
+<!-- Mortgage -->
+<div class="container">
+    <h2>Mortgage Calculator</h2>
+    <h4>Compute Amorization Table</h4>
+
+       <label for="principal">Loan Amount:</label>
+       <input type="number" id="principal" min="1" step="1000"><br><br>
+       
+       <label for="interest">Interest Rate (%):</label>
+       <input type="number" id="interest" min="0" step="0.1"><br><br>
+               
+       <label for="term">Loan Term (Years):</label>
+       <input type="number" id="term" min="1"><br><br>
+
+       <button class="enterb" onclick="calculateMortgage()">Calculate</button> &nbsp;&nbsp;&nbsp; <button class="enterb" onclick="window.location.reload();">Reset</button>
+
+    <p></p>
+    <div id="resultm"></div>
+</div>
+
+</body>
+</html>
