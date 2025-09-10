@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="3600">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Stock Portfolio">
+    <meta name="author" content="Felix Siquijor">
+    <title>Stock Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <center>
+        <h1>Stock Portfolio</h1>
+        </center>
+    <!-- TradingView Ticker BEGIN -->
+    <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+    "symbols": [
+      {
+        "proName": "FOREXCOM:SPXUSD",
+        "title": "S&P 500 Index"
+      },
+      {
+        "proName": "BITSTAMP:BTCUSD",
+        "title": "Bitcoin"
+      },
+      {
+        "proName": "BITSTAMP:ETHUSD",
+        "title": "Ethereum"
+      },
+      {
+        "description": "NASDAQ",
+        "proName": "NASDAQ:NDX"
+      },
+      {
+        "description": "META",
+        "proName": "NASDAQ:META"
+      },
+      {
+        "description": "NVIDIA",
+        "proName": "NASDAQ:NVDA"
+      },
+      {
+        "description": "AMD",
+        "proName": "NASDAQ:AMD"
+      },
+      {
+        "description": "Microsoft",
+        "proName": "NASDAQ:MSFT"
+      },
+      {
+        "description": "Tesla",
+        "proName": "NASDAQ:TSLA"
+      },
+      {
+        "description": "Apple",
+        "proName": "NASDAQ:AAPL"
+      },
+      {
+        "description": "XDIV",
+        "proName": "TSX:XEI"
+      },
+      {
+        "description": "ZAG",
+        "proName": "TSX:ZAG"
+      }
+    ],
+    "showSymbolLogo": true,
+    "isTransparent": false,
+    "displayMode": "adaptive",
+    "colorTheme": "light",
+    "locale": "en"
+  }
+    </script>
+  </div>
+  <!-- TradingView Ticker END -->
+    </header>
+
+    <main>
+    <div class="row">
+    <div class="column">
+  <!-- TradingView VFV BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {
+    "symbol": "TSX:VFV",
+    "width": "100%",
+    "height": "100%",
+    "locale": "en",
+    "dateRange": "1D",
+    "colorTheme": "light",
+    "isTransparent": false,
+    "autosize": true,
+    "largeChartUrl": "",
+    "chartOnly": false,
+    "noTimeScale": false
+  }
+    </script>
+  </div>
+  <!-- TradingView VFV END --></div><div class="column">
+  <!-- TradingView XFN BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {
+    "symbol": "TSX:XFN",
+    "width": "100%",
+    "height": "100%",
+    "locale": "en",
+    "dateRange": "1D",
+    "colorTheme": "light",
+    "isTransparent": false,
+    "autosize": true,
+    "largeChartUrl": "",
+    "chartOnly": false,
+    "noTimeScale": false
+  }
+    </script>
+  </div>
+  <!-- TradingView XFN END --></div><div class="column">
+  <!-- TradingView CM BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {
+    "symbol": "TSX:CM",
+    "width": "100%",
+    "height": "100%",
+    "locale": "en",
+    "dateRange": "1D",
+    "colorTheme": "light",
+    "isTransparent": false,
+    "autosize": true,
+    "largeChartUrl": "",
+    "chartOnly": false,
+    "noTimeScale": false
+  }
+    </script>
+  </div>
+  <!-- TradingView CM END --></div><div class="column">
+  <!-- TradingView VCN BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {
+    "symbol": "TSX:VCN",
+    "width": "100%",
+    "height": "100%",
+    "locale": "en",
+    "dateRange": "1D",
+    "colorTheme": "light",
+    "isTransparent": false,
+    "autosize": true,
+    "largeChartUrl": "",
+    "chartOnly": false,
+    "noTimeScale": false
+  }
+    </script>
+  </div>
+  <!-- TradingView VCN END --></div></div><div class="row"><div class="column">
+  <!-- TradingView XIU BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {
+    "symbol": "TSX:XIU",
+    "width": "100%",
+    "height": "100%",
+    "locale": "en",
+    "dateRange": "1D",
+    "colorTheme": "light",
+    "isTransparent": false,
+    "autosize": true,
+    "largeChartUrl": "",
+    "chartOnly": false,
+    "noTimeScale": false
+  }
+    </script>
+  </div>
+  <!-- TradingView XIU END --></div><div class="column">
+  <!-- TradingView XEI BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {
+    "symbol": "TSX:XEI",
+    "width": "100%",
+    "height": "100%",
+    "locale": "en",
+    "dateRange": "1D",
+    "colorTheme": "light",
+    "isTransparent": false,
+    "autosize": true,
+    "largeChartUrl": "",
+    "chartOnly": false,
+    "noTimeScale": false
+  }
+    </script>
+  </div>
+  <!-- TradingView XEI END --></div><div class="column">
+  <!-- TradingView XAW BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {
+    "symbol": "TSX:XAW",
+    "width": "100%",
+    "height": "100%",
+    "locale": "en",
+    "dateRange": "1D",
+    "colorTheme": "light",
+    "isTransparent": false,
+    "autosize": true,
+    "largeChartUrl": "",
+    "chartOnly": false,
+    "noTimeScale": false
+  }
+    </script>
+  </div>
+  <!-- TradingView XAW END --></div><div class="column">
+  <!-- TradingView VEQT BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {
+    "symbol": "TSX:VEQT",
+    "width": "100%",
+    "height": "100%",
+    "locale": "en",
+    "dateRange": "1D",
+    "colorTheme": "light",
+    "isTransparent": false,
+    "autosize": true,
+    "largeChartUrl": "",
+    "chartOnly": false,
+    "noTimeScale": false
+  }
+    </script>
+  </div>
+  <!-- TradingView VEQT END --></div></div><div class="row"><div class="column">
+  <!-- TradingView FTS BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {
+    "symbol": "TSX:FTS",
+    "width": "100%",
+    "height": "100%",
+    "locale": "en",
+    "dateRange": "1D",
+    "colorTheme": "light",
+    "isTransparent": false,
+    "autosize": true,
+    "largeChartUrl": "",
+    "chartOnly": false,
+    "noTimeScale": false
+  }
+    </script>
+  </div>
+  <!-- TradingView FTS END --></div><div class="column">
+  <!-- TradingView RBA BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {
+    "symbol": "NYSE:RBA",
+    "width": "100%",
+    "height": "100%",
+    "locale": "en",
+    "dateRange": "1D",
+    "colorTheme": "light",
+    "isTransparent": false,
+    "autosize": true,
+    "largeChartUrl": "",
+    "chartOnly": false,
+    "noTimeScale": false
+  }
+    </script>
+  </div>
+  <!-- TradingView RBA END --></div><div class="column">
+  <!-- TradingView  SMAX BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {
+    "symbol": "TSX:SMAX",
+    "width": "100%",
+    "height": "100%",
+    "locale": "en",
+    "dateRange": "1D",
+    "colorTheme": "light",
+    "isTransparent": false,
+    "autosize": true,
+    "largeChartUrl": "",
+    "chartOnly": false,
+    "noTimeScale": false
+  }
+    </script>
+  </div>
+  <!-- TradingView SMAX END --></div><div class="column">
+  <!-- TradingView VOO BEGIN -->
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {
+    "symbol": "AMEX:VOO",
+    "width": "100%",
+    "height": "100%",
+    "locale": "en",
+    "dateRange": "1D",
+    "colorTheme": "light",
+    "isTransparent": false,
+    "autosize": true,
+    "largeChartUrl": "",
+    "chartOnly": false,
+    "noTimeScale": false
+  }
+    </script>
+  </div>
+  <!-- TradingView VOO END --></div></div>
+
+  <!-- PST Time-->
+  <div class="row"><div class="column"> 
+    <div class="location">
+      <h4>Vancouver, Canada</h4>
+      <div id="vancouver-time" class="time">Loading...</div>
+    </div>
+    </div><div class="column">
+  
+    <div class="location">
+      <h4>New Jersey, USA</h4>
+      <div id="new-jersey-time" class="time">Loading...</div>
+    </div>
+    </div><div class="column">
+  
+    <div class="location">
+      <h4>Texas, USA</h4>
+      <div id="texas-time" class="time">Loading...</div>
+    </div>
+    </div><div class="column">
+  
+    <div class="location">
+      <h4>Manila, Philippines</h4>
+      <div id="manila-time" class="time">Loading...</div>
+    </div>
+    </div><div class="column"></div>
+  
+    <script>
+    function updateTimes() {
+      const now = new Date();
+    
+      // Vancouver (Pacific Time)
+      const vancouverTime = now.toLocaleString("en-US", { timeZone: "America/Vancouver", dateStyle: "full", timeStyle: "long" });
+      document.getElementById("vancouver-time").textContent = vancouverTime;
+  
+      // New Jersey (Eastern Time)
+      const newJerseyTime = now.toLocaleString("en-US", { timeZone: "America/New_York", dateStyle: "full", timeStyle: "long" });
+      document.getElementById("new-jersey-time").textContent = newJerseyTime;
+    
+      // Texas (Central Time - Assuming a major city like Dallas or Houston)
+      const texasTime = now.toLocaleString("en-US", { timeZone: "America/Chicago", dateStyle: "full", timeStyle: "long" });
+      document.getElementById("texas-time").textContent = texasTime;
+    
+      // Manila (Philippine Standard Time)
+      const manilaTime = now.toLocaleString("en-US", { timeZone: "Asia/Manila", dateStyle: "full", timeStyle: "long" });
+      document.getElementById("manila-time").textContent = manilaTime;
+    }
+    
+    // Update times immediately and then every second
+    updateTimes();
+    setInterval(updateTimes, 1000);
+    </script>
+    <!-- end PST Tme -->
+
+  <!-- TradingView FOREXN -->
+  <div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
+  {
+  "width": "100%",
+  "height": "100%",
+  "currencies": [
+    "PHP",
+    "USD",
+    "CAD",
+    "SGD",
+    "EUR"
+  ],
+  "isTransparent": false,
+  "colorTheme": "light",
+  "locale": "en",
+  "backgroundColor": "#ffffff"
+}
+  </script>
+  </div>
+  <!-- TradingView FOREX-->
+
+  </main></div>
+
+    <footer>
+        <div align="center">
+        <p>&copy; Lexelmedia</p></div>
+    </footer>
+</body>
+</html>
+
