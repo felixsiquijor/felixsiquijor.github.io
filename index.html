@@ -1,16 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Felix Siquijor Portfolio">
+    <meta name="description" content="LexelCloud">
     <meta name="author" content="Felix Siquijor">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="main-v1.css?" type="text/css" />
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    <meta name="robots" content="index, follow">
-    
+    <link rel="stylesheet" href="main-v35.css?" type="text/css" />
+
     <script src="https://kit.fontawesome.com/30bc193808.js" crossorigin="anonymous"></script>
 
 <!-- <link
@@ -19,8 +18,24 @@
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
     crossorigin="anonymous"
   /> -->
-  
-    <title>Portfolio</title>
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://lexelcloud.com">
+<meta property="og:type" content="website">
+<meta property="og:title" content="L E X E L C L O U D">
+<meta property="og:description" content="Webdev Portfolio Collection">
+<meta property="og:image" content="https://lexelcloud.com/img/LexelCloud_Logo.png">
+<meta property="og:site_name" content="L E X E L C L O U D"/>
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="lexelcloud.com">
+<meta property="twitter:url" content="https://lexelcloud.com">
+<meta name="twitter:title" content="L E X E L C L O U D">
+<meta name="twitter:description" content="Webdev Portfolio Collection">
+<meta name="twitter:image" content="https://lexelcloud.com/img/LexelCloud_Logo.png">
+
+    <title>LexelCloud</title>
 
 </head>
 <body>
@@ -28,41 +43,43 @@
     <nav class="navbar">
       <div class="navbar-center">
           <ul class="nav-links">
-              <li><a href="#"><i class="fas fa-home"></i></a></li>
+              <li><a href="#"><i class="fas fa-home"></a></i></li>
               <li><a href="#websites">Websites</a></li> 
               <li><a href="#resources">Resources</a></li>
-	            <li><a href="#projects">Projects</a></li>
+	      <li><a href="#projects">Projects</a></li>
               <li><a href="#investing">Investing</a></li>
+              <li><a href="#travel">Travel</a></li>
           </ul>
       <div><span class="nav-icon">
       <!--<a href="https://www.pinterest.ca/"><i class="fab fa-pinterest fa-2x"></i></a>
           <a href="https://twitter.com/"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="https://www.linkedin.com/in/felixsiquijor/"><i class="fab fa-linkedin fa-2x"></i></a> -->
+          <a href="https://www.instagram.com"><i class="fab fa-instagram fa-2x"></i></a> -->
           <span id="faClickable" onclick="myToggle()"><i class="fas fa-toggle-on"></i></span>
           <a href="https://www.linkedin.com/in/felixsiquijor/"><i class="fab fa-linkedin fa-2x"></i></a>
           <a href="https://www.facebook.com/felix.siquijor" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
       </span></div>
       </div>
-      <div class="toggle_btn">      
+      <div class="toggle_btn">
            <i class="fa-solid fa-bars"></i>
-      </div><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p>               
+      </div><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p><p>&nbsp</p>
       <div class="dropdown_menu open">
               <li><a href="#">Home</a></li>
               <li><a href="#websites">Websites</a></li>
               <li><a href="#resources">Resources</a></li>
-	            <li><a href="#projects">Projects</a></li>
-              <li><a href="#investing">Investing</a></li>                    
+	      <li><a href="#projects">Projects</a></li>
+              <li><a href="#investing">Investing</a></li>
+              <li><a href="#travel">Travel</a></li>
       </div>
   </nav>
-  <!-- End Navigation-->  
+  <!-- End Navigation-->
 <!-- hero -->
   <header class="hero">
   <!-- <div class="banner">
-       <h1 class="banner-title">Lexelcloud</h1> 
+       <h1 class="banner-title">Lexelcloud</h1>
        </div> -->
   </header>
 <!-- end of hero -->
-  
+
 <div id="main">
 
   <!-- Websites -->
@@ -161,7 +178,8 @@
 
       </article>
       <!-- end of Aya -->
-       <!-- Rosary -->
+
+      <!-- Rosary -->
        <article class="product">
         <div class="img-container">
           <img loading="lazy"
@@ -170,7 +188,7 @@
             class="product-img"
           />
           <button class="bag-btn" data-id="1">
-            <a href="https://rosary.lexelcloud.com/" target="_blank">Rosary</a>
+            <a href="/rosary" target="_blank">Rosary</a>
           </button>
         </div>
 
@@ -197,7 +215,7 @@
 
      </article>
      <!-- end of toothdcare -->
-
+ 
 </div>
 </section>
 
@@ -209,132 +227,136 @@
    </div>
    <div class="products-center">
 
+
+
+
 <!-- Video Editing -->
-<article class="product">
-    <div class="txt-container">
+<article class="card">
+    <div class="card-desc">
     <a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank">Davinci Resolve</a><br>
     <a href="https://openshot.org" target="_blank">OpenShot</a>
     </div>
-    <h3>Video Editing</h3>
+    <h3 class="card-title">Video Editing</h3>
 </article>
 <!-- end of Video Editing -->
 
 <!-- Linux Remote Desktop -->
-<article class="product">
-    <div class="txt-container">
+<article class="card">
+    <div class="card-desc">
     <a href="https://www.xrdp.org" target="_blank">xrdp</a><br>
     <a href="https://www.xfce.org" target="_blank">XFCE</a>
     </div>
-    <h3>Linux Remote Desktop</h3>
+    <h3 class="card-title">Linux Remote Desktop</h3>
 </article>
 <!-- end of Linux Remote Desktop -->
 
 <!-- Security -->
-<article class="product">
-    <div class="txt-container">
+<article class="card">
+    <div class="card-desc">
     <a href="https://securityonionsolutions.com/" target="_blank">SecurityOnion</a><br>
     <a href="https://www.wireshark.org" target="_blank">Wireshark</a>
     </div>
-    <h3>Security</h3>
+    <h3 class="card-title">Security</h3>
 </article>
 <!-- end of Security -->
 
 <!-- Server Monitoring -->
-<article class="product">
-    <div class="txt-container">
+<article class="card">
+    <div class="card-desc">
     <a href="https://www.netdata.cloud" target="_blank">Netdata</a><br>
     <a href="https://github.com/aristocratos/btop" target="_blank">btop</a>
     </div>
-    <h3>Server Monitoring</h3>
+    <h3 class="card-title">Server Monitoring</h3>
 </article>
 <!-- Server Monitoring -->
 
 <!-- Automation -->
-<article class="product">
-    <div class="txt-container">
+<article class="card">
+    <div class="card-desc">
     <a href="https://github.com/ansible/ansible" target="_blank">Ansible</a><br>
     <a href="https://learn.microsoft.com/en-us/powershell/microsoftgraph/get-started?view=graph-powershell-1.0" target="_blank">Graph Powershell</a><br>
     <a href="https://devhints.io/bash" target="_blank">Shell Script</a><br>
     <a href="https://linux.die.net/man/1/dialog" target="_blank">Dialog</a><br>
     <a href="https://linux.die.net/man/1/expect" target="_blank">Expect</a>
     </div>
-    <h3>Automation</h3>
+    <h3 class="card-title">Automation</h3>
 </article>
 <!-- end of Automation -->
 
 <!-- X11 Forwarding -->
-<article class="product">
-    <div class="txt-container">
+<article class="card">
+    <div class="card-desc">
     <a href="http://www.straightrunning.com/XmingNotes/" target="_blank">Xming</a><br>
     <a href="https://www.putty.org" target="_blank">Putty</a><br>
     <a href="https://www.vandyke.com/" target="_blank">SecureCRT</a><br>
     <a href="https://www.winscp.net" target="_blank">Winscp</a>
     </div>
-    <h3>X11 Forwarding</h3>
+    <h3 class="card-title">X11 Forwarding</h3>
 </article>
 <!-- end of X11 Forwarding -->
 
 <!-- Virtualization -->
-<article class="product">
-    <div class="txt-container">
+<article class="card">
+    <div class="card-desc">
     <a href="https://www.proxmox.com" target="_blank">Proxmox</a><br>
     <a href="https://www.virtualbox.org" target="_blank">Virtualbox</a><br>
     <a href="https://www.vmware.com" target="_blank">VMware</a><br>
     </div>
-    <h3>Virtualization</h3>
+    <h3 class="card-title">Virtualization</h3>
 </article>
 <!-- end of Virtualization -->
 
 <!-- Disk Imaging Utility -->
-<article class="product">
-    <div class="txt-container">
+<article class="card">
+    <div class="card-desc">
     <a href="https://rufus.ie" target="_blank">Rufus</a><br>
     <a href="https://macrium.com" target="_blank">Macrium</a>
     </div>
-    <h3>Disk Imaging Utility</h3>
+    <h3 class="card-title">Disk Imaging Utility</h3>
 </article>
 <!-- end of Disk Imaging Utility -->
 
 <!-- Cloud Storage -->
-<article class="product">
-    <div class="txt-container">
+<article class="card">
+    <div class="card-desc">
     <a href="https://nextcloud.com" target="_blank">Nextcloud</a><br>
     <a href="https://owncloud.com" target="_blank">ownCloud</a>
     </div>
-    <h3>Cloud Storage</h3>
+    <h3 class="card-title">Cloud Storage</h3>
 </article>
 <!-- end of Cloud Storage -->
 
 <!-- Cloud Platform -->
-<article class="product">
-    <div class="txt-container">
+<article class="card">
+    <div class="card-desc">
     <a href="https://wordops.net" target="_blank" title="WordOps is an essential toolset that eases WordPress site and server administration.">WordOps</a><br>
     <a href="https://www.coolify.io" target="_blank" title="An open-source & self-hostable Heroku / Netlify / Vercel alternative.">Coolify</a>
     </div>
-    <h3>Cloud Platform</h3>
+    <h3 class="card-title">Cloud Platform</h3>
 </article>
 <!-- end of Cloud Platform -->
 
 <!-- Blogs -->
-<article class="product">
-  <div class="txt-container">
+<article class="card">
+  <div class="card-desc">
   <a href="https://lextertech.blogspot.com" target="_blank">LexterTech</a><br>
   <a href="https://www.tecmint.com/" target="_blank">TecMint</a><br>
   <a href="https://github.com/sindresorhus/awesome" target="_blank">Awesome</a>
   </div>
-  <h3>Blogs</h3>
+  <h3 class="card-title">Blogs</h3>
 </article>
 <!-- end of Blogs -->
 
 <!-- Fitness -->
-<article class="product">
-  <div class="txt-container">
+<article class="card">
+  <div class="card-desc">
   <a href="https://www.lih.lu/en/visceral-fat-calculator/" target="_blank">Visceral Fat Calculator</a><br>
   <a href="https://www.youtube.com/embed/JCTb3QSrGMQ?si=DzxagNxt5lTQT-58" target="_blank">Anti-aging Dr Rhonda Patrick</a>
   </div>
-  <h3>Fitness</h3>
+  <h3 class="card-title">Fitness</h3>
 </article>
 <!-- end of Fitness -->
+
 
 </div>
 </section>
@@ -348,35 +370,69 @@
   <div class="products-center">
 
 <!-- Ascii Art -->
-<article class="product">
-   <div class="txt-container">
+<article class="card">
+   <div class="card-desc">
    <a href="https://wp.lexelcloud.com/ascii/" target="_blank">Text To Ascii (Password Protected)</a>
    </div>
-   <h3>Ascii Art</h3>
+   <h3 class="card-title">Ascii Art</h3>
 </article>
 <!-- end of Ascii Art -->
 
 <!-- Tools -->
-<article class="product">
-  <div class="txt-container">
-  <a href="/tools/" target="_blank">Calculator, Temp Converter, Mortgage Calculator</a>
+<article class="card">
+  <div class="card-desc">
+  <a href="./tools/" target="_blank">Calculator, Temp Converter, Mortgage Calculator</a>
   </div>
-  <h3>Tools</h3>
+  <h3 class="card-title">Tools</h3>
 </article>
 <!-- end of Tools -->
-
 </div>
 </section>
 
 <section id="projects" class="products">
   <div class="products-center">
 <article class="product">
+<!--GeoIP start-->
+<div style="text-align:center;">
+<div class="txt-container">
+<h3> Your Location Data</h3>
+<div id="location">Detecting...</div>
+
+<script type="text/javascript">
+        // Use a free API like ipinfo.io
+        fetch('https://api.ipinfo.io/lite/me?token=1ea38d88bc6871')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('location').innerHTML =
+                    `IP Address: ${data.ip} &nbsp;ASN: ${data.asn}<br>Country: ${data.country}<br>Org: ${data.as_name}`;
+            })
+            .catch(error => {
+                document.getElementById('location').innerHTML = "Location not found";
+            });
+</script>
+
+<!-- ipapi.co
+<script type="text/javascript">
+        // Use a free API like ipapi.co
+        fetch('https://ipapi.co/json/')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('location').innerHTML = 
+                    `IP Address: ${data.ip} &nbsp;ASN: ${data.asn}<br>City: ${data.city}<br>Country: ${data.country_name}<br>Org: ${data.org}`;
+            })
+            .catch(error => {
+                document.getElementById('location').innerHTML = "Location not found";
+            });
+</script> --> 
+</div></div>
+<!--GeoIP end-->
+</article></div><div class="products-center"><article class="product">
 <!--OST Widget code start-->
 <div style="text-align:right;">
 <div style="min-height:360px;">
 <div style="width:100%;height:0;padding-bottom:50%;position:relative;">
 <iframe style="border:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:360px;border:none;overflow:hidden !important;" src="//openspeedtest.com/speedtest"></iframe>
-</div></div><button onClick="window.location.reload();" style="padding:8px;background-color:#a6e7ff;border:0;border-radius:4px;">Reset Test</button>&nbsp;&nbsp; Provided by <a href="https://openspeedtest.com">OpenSpeedtest.com</a></div>
+</div></div><button onClick="window.location.reload();" style="padding:8px;background-color:#a6e7ff;border:0;border-radius:4px;">Reset Test</button>&nbsp;&nbsp; Provided by <a href="https://openspeedtest.com" style="color:#a6e7ff">OpenSpeedtest.com</a></div>
 <!-- OST Widget code end -->
 </article>
 </div>
@@ -387,9 +443,91 @@
   <div class="section-title">
     <h2>Investing</h2>
   </div>
-  <div class="products-center">
+<div class="products-center">
+    <!-- TradingView Ticker BEGIN -->
+    <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+    "symbols": [
+      {
+        "proName": "FOREXCOM:SPXUSD",
+        "title": "S&P 500 Index"
+      },
+      {
+        "proName": "BITSTAMP:BTCUSD",
+        "title": "Bitcoin"
+      },
+      {
+        "proName": "BITSTAMP:ETHUSD",
+        "title": "Ethereum"
+      },
+      {
+        "description": "NASDAQ",
+        "proName": "FOREXCOM:NSXUSD"
+      },
+      {
+        "description": "META",
+        "proName": "NASDAQ:META"
+      },
+      {
+        "description": "NVIDIA",
+        "proName": "NASDAQ:NVDA"
+      },
+      {
+        "description": "AMD",
+        "proName": "NASDAQ:AMD"
+      },
+      {
+        "description": "Microsoft",
+        "proName": "NASDAQ:MSFT"
+      },
+      {
+        "description": "Tesla",
+        "proName": "NASDAQ:TSLA"
+      },
+      {
+        "description": "Apple",
+        "proName": "NASDAQ:AAPL"
+      },
+      {
+        "description": "XDIV",
+        "proName": "TSX:XDIV"
+      },
+      {
+        "description": "ZAG",
+        "proName": "TSX:ZAG"
+      },
+      {
+        "description": "VEQT",
+        "proName": "TSX:VEQT"
+      },
+      {
+        "description": "XIC",
+        "proName": "TSX:XIC"
+      },
+      {
+        "description": "TEC",
+        "proName": "TSX:TEC"
+      },
+      {
+        "description": "VDY",
+        "proName": "TSX:VDY"
+      }
+    ],
+    "showSymbolLogo": true,
+    "isTransparent": false,
+    "displayMode": "adaptive",
+    "colorTheme": "light",
+    "locale": "en"
+  }
+    </script>
+  </div>
+  <!-- TradingView Ticker END -->
 
+</div>
 <!-- ChatGPT Query -->
+<div class="products-center">
 <article class="product">
    <button type="button" class="collapsible">GPT-5 Prompts to Improve your Financial Query</button>
    <div class="content">
@@ -430,8 +568,18 @@ Replace *<i>SPECIFIC INVESTMENT OPPORTUNITY</i>* with stock ticker like XEI.to
    </div>
 <!-- end of Trading View -->
 
+<!-- Canadian Financial Calculators -->
+   <button type="button" class="collapsible">Canadian Financial Calculators</button>
+   <div class="content">
+<p style="padding:15px;">
+<a href="https://canadacalculator.ca/" target="_blank">35 Free Canadian Financial Calculators</a><br>
+</p>
+   </div>
+<!-- end of Canadian Financial Calculators -->
+
 </article>
 </section>
+
 
 <!-- Podcast -->
 <section id="investing" class="products">
@@ -502,23 +650,35 @@ Replace *<i>SPECIFIC INVESTMENT OPPORTUNITY</i>* with stock ticker like XEI.to
 </div>
 
 <div class="mySlides fade">
-    <iframe class="vidsize" loading="lazy" src="https://www.youtube.com/embed/3MMG5SguRdA?si=fqGogAypbXGC46A2" title="What No One Tells You About Covered Call ETF" allowfullscreen></iframe>
-</div>
-
-<div class="mySlides fade">
     <iframe class="vidsize" loading="lazy" src="https://www.youtube.com/embed/rROvbfCgm2E?si=lM9LnJSy31jm7GGF" title="Growth ETF vs. Dividend ETF Investing" allowfullscreen></iframe>
 </div>
 
 <div class="mySlides fade">
-    <iframe class="vidsize" loading="lazy" src="https://www.youtube.com/embed/ol907h0G9LY?si=fKvMzvZZCnYPw3ES" title="Peter Lynch: Everything You Need to Know About Investing in One Video" allowfullscreen></iframe>
-</div>
-
-<div class="mySlides fade">
-    <iframe class="vidsize" loading="lazy" src="https://www.youtube.com/embed/QCEH9fD6ywY?si=8M1fTR9bmG4eDcpY" title="Learn To Earn By Peter Lynch" allowfullscreen></iframe>
+    <iframe class="vidsize" loading="lazy" src="https://www.youtube.com/embed/pjdB4rPgvYk?si=Bzdne9KTW-jRnLKr" title="Your TFSA Is Bleeding Money to the IRS (Here's why)" allowfullscreen></iframe>
 </div>
 
 <div class="mySlides fade">
     <iframe class="vidsize" loading="lazy" src="https://www.youtube.com/embed/JXLJkUWidFU?si=bI_E7lvM4GnozXKo" title="Warren Buffett's Most Iconic Lecture EVER" allowfullscreen></iframe>
+</div>
+
+<div class="mySlides fade">
+    <iframe class="vidsize" loading="lazy" src="https://www.youtube.com/embed/EqkMH5ucUOw?si=uSVm1CAtDgkbyZ8D" title="Leverage is Your Secret Weapon - Why All Debt Isn't Bad!" allowfullscreen></iframe>
+</div>
+
+<div class="mySlides fade">
+    <iframe class="vidsize" loading="lazy" src="https://www.youtube.com/embed/dJKdfdw71tM?si=O5ej9E3NBmlLPL2H" title="The Smith Maneuver Explained - Canadian Mortgage Hack" allowfullscreen></iframe>
+</div>
+
+<div class="mySlides fade">
+    <iframe class="vidsize" loading="lazy" src="https://www.youtube.com/embed/vNuxJ_lc-2w?si=r1l5u_jRaM9kz9lm" title="RENTING vs BUYING a Home in Canada: One Thing People Forget" allowfullscreen></iframe>
+</div>
+
+<div class="mySlides fade">
+    <iframe class="vidsize" loading="lazy" src="https://www.youtube.com/embed/OKwwrHAt_3Y?si=ZvHmuOkmsv3O5ENU" title="Never Keep Over THIS AMOUNT In a Bank" allowfullscreen></iframe>
+</div>
+
+<div class="mySlides fade">
+    <iframe class="vidsize" loading="lazy" src="https://www.youtube.com/embed/C3gkSC5qbus?si=OAagKOLc-7pYzBaX" title="Compounding Has a Minimum. Most People Are Below It" allowfullscreen></iframe>
 </div>
 
 </center>
@@ -541,6 +701,9 @@ Replace *<i>SPECIFIC INVESTMENT OPPORTUNITY</i>* with stock ticker like XEI.to
   <span class="dot" onclick="currentSlide(8)"></span>
   <span class="dot" onclick="currentSlide(9)"></span>
   <span class="dot" onclick="currentSlide(10)"></span>
+  <span class="dot" onclick="currentSlide(11)"></span>
+  <span class="dot" onclick="currentSlide(12)"></span>
+  <span class="dot" onclick="currentSlide(13)"></span>
 </div>
 
 <br><center>
@@ -553,11 +716,14 @@ Replace *<i>SPECIFIC INVESTMENT OPPORTUNITY</i>* with stock ticker like XEI.to
   <a href="https://www.youtube.com/embed/eSOa8Tq3sEI?si=DX1FUfL3anCjvuZR" target="_blank">Covered-Call ETFs Are Booming. But Not All Yield Is Good</a>
   <a href="https://www.youtube.com/embed/_yNq1vbdJAo?si=yfjbMluArZrKl4J-" target="_blank">YieldMax ETFs are absolute GARBAGE</a>
   <a href="https://www.youtube.com/embed/xfiIPijk2a4?si=kjSTAfLGcbGE6CqL" target="_blank">High Income Covered Call ETFs Show Their True Colors</a>
-  <a href="https://www.youtube.com/embed/3MMG5SguRdA?si=fqGogAypbXGC46A2" target="_blank">What No One Tells You About Covered Call ETF</a>
   <a href="https://www.youtube.com/embed/rROvbfCgm2E?si=lM9LnJSy31jm7GGF" target="_blank">Growth ETF vs. Dividend ETF Investing</a>
-  <a href="https://www.youtube.com/embed/ol907h0G9LY?si=fKvMzvZZCnYPw3ES" target="_blank">Peter Lynch: Everything You Need to Know About Investing in One Video</a>
-  <a href="https://www.youtube.com/embed/QCEH9fD6ywY?si=8M1fTR9bmG4eDcpY" target="_blank">Learn To Earn By Peter Lynch</a>
+  <a href="https://www.youtube.com/embed/pjdB4rPgvYk?si=Bzdne9KTW-jRnLKr" target="_blank">Your TFSA Is Bleeding Money to the IRS (Here's why)</a>
   <a href="https://www.youtube.com/embed/JXLJkUWidFU?si=bI_E7lvM4GnozXKo" target="_blank">Warren Buffett's Most Iconic Lecture EVER</a>
+  <a href="https://www.youtube.com/embed/EqkMH5ucUOw?si=uSVm1CAtDgkbyZ8D" target="_blank">Leverage is Your Secret Weapon - Why All Debt Isn't Bad!</a>
+  <a href="https://www.youtube.com/embed/dJKdfdw71tM?si=O5ej9E3NBmlLPL2H" target="_blank">The Smith Maneuver Explained - Canadian Mortgage Hack</a>
+  <a href="https://www.youtube.com/embed/vNuxJ_lc-2w?si=r1l5u_jRaM9kz9lm" target="_blank">RENTING vs BUYING a Home in Canada: One Thing People Forget</a>
+  <a href="https://www.youtube.com/embed/OKwwrHAt_3Y?si=ZvHmuOkmsv3O5ENU" target="_blank">Never Keep Over THIS AMOUNT In a Bank</a>
+  <a href="https://www.youtube.com/embed/C3gkSC5qbus?si=OAagKOLc-7pYzBaX" target="_blank">Compounding Has a Minimum. Most People Are Below It</a>
 </div>
 </center>
 
@@ -565,6 +731,24 @@ Replace *<i>SPECIFIC INVESTMENT OPPORTUNITY</i>* with stock ticker like XEI.to
 </div>
 </article>
 <!-- end of Investing Vides -->
+
+<!-- Travel -->
+<section id="travel" class="products">
+  <div class="section-title">
+    <h2>Travel</h2>
+  </div>
+<article class="product"><center>
+<div>
+<iframe class="vidsize" loading="lazy" src="https://www.youtube.com/embed/ELdG2vatU8c?si=DOFoEFd4os3Fpn8h" title="April 08 2026, General Audience - Pope Leo XIV" allowfullscreen></iframe>
+</div>
+<h3>Papal Audience April 8th 2026</h3>
+<audio controls>
+  <source src="/audio/Papal Audience April 2026.m4a" type="audio/mp4">
+  Your browser does not support the audio element.
+</audio>
+</center>
+<!-- end Travel -->
+
 
 </div>
 </section>
@@ -588,9 +772,7 @@ for (i = 0; i < coll.length; i++) {
 
 </script>
 
-
-
-<!-- Dark Mode -->
+<!-- Darm Mode -->
 <script>
     function myToggle() {
        var element = document.body;
@@ -600,19 +782,19 @@ for (i = 0; i < coll.length; i++) {
 
 <!-- Toggle Menu -->
 <script type='text/javascript'>
-  const toggleBtn = document.querySelector('.toggle_btn')
-  const toggleBtnIcon = document.querySelector('.toggle_btn i')
-  const dropDownMenu = document.querySelector('.dropdown_menu')
+     const toggleBtn = document.querySelector('.toggle_btn')
+     const toggleBtnIcon = document.querySelector('.toggle_btn i')
+     const dropDownMenu = document.querySelector('.dropdown_menu')
 
-  toggleBtn.onclick = function () {
-     dropDownMenu.classList.toggle('open')
-     const isOpen = dropDownMenu.classList.contains('open')
+     toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
 
-     toggleBtnIcon.classList = isOpen
-     ? 'fa-solid fa-bars'  
-     : 'fa-solid fa-xmark'   
-  }
-</script>
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-bars'  
+        : 'fa-solid fa-xmark'   
+     }
+</script> 
 
 <!-- Slideshow -->
 <script type='text/javascript'>
@@ -670,12 +852,19 @@ function showSlides(n) {
   }
 </script>
 
+
 <!-- Footer -->
   <footer>
-    <h5>Felix Siquijor &copy; 2025</h5>
+    <h5>Lexelcloud &copy; 2026<h5>
   </footer>
 
   </div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"91644fb57145460ea91c9032f3c444e8","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+
+
+
 
